@@ -1,0 +1,10 @@
+.TopBar {
+    background-color: #00194c;
+    color: #fff;
+    height: 60px;
+    width: 100%;
+    display: flex;
+    float: top;
+    align-items: center; 
+    justify-content: center;
+}

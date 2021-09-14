@@ -1,0 +1,15 @@
+.BlueBox{
+    background-color: #4196a4;
+    color: white;
+    height: 50px;
+    width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5px;
+    text-align: center;
+    align-items: center; 
+    justify-content: left;
+    display: flex;
+    font-family: fantasy;
+    font-size: 25px;
+}

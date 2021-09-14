@@ -1,0 +1,9 @@
+.NewsMenu{
+    height: 50px;
+    border-color: black;
+    background-color: white;
+    border-bottom: solid 1px;
+    justify-content: center;
+    display: flex;
+    padding-bottom: 10px;
+}

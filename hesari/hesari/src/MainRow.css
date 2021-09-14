@@ -1,0 +1,7 @@
+.MainRow{
+    display: flex;
+    flex-direction: row;
+    margin-right: auto;
+    width: 900px;
+    padding-bottom: 10px;
+}
