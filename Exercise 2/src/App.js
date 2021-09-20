@@ -22,7 +22,7 @@ class App extends React.Component {
       ]
     };
 
-    this.addProduct = this.addProduct.bind(this);
+    //this.addProduct = this.addProduct.bind(this);
   }
   
 
