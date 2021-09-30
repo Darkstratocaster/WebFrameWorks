@@ -1,0 +1,16 @@
+.TopBar {
+    background-color: yellow;
+    color: black;
+    height: 60px;
+    width: 100%;
+    display: flex;
+    float: top;
+    align-items: center; 
+}
+
+.Logo {
+        color: black;
+        font-family: fantasy;
+        font-size: 35px;
+        padding-right: 40%;
+}

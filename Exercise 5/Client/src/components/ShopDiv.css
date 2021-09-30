@@ -1,0 +1,4 @@
+.ShopDiv{
+    flex-wrap: wrap;
+    display: flex;
+}

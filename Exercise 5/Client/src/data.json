@@ -1,0 +1,41 @@
+{
+    "records": [
+        {
+            "id": 1,
+            "name": "I Worship Chaos",
+            "band": "Children of Bodom",
+            "type": "CD",
+            "price": 11.37,
+            "rating": 4.5,
+            "image": "I_Worship_Chaos.jpg"
+        },
+        {
+            "id": 2,
+            "name": "Midian",
+            "band": "Cradle of Filth",
+            "type": "Vinyl",
+            "price": 12.19,
+            "rating": 4,
+            "image": "midian.jpg"
+        },
+        {
+            "id": 3,
+            "name": "De Mysteriis Dom Sathanas",
+            "band": "Mayhem",
+            "type": "Cassette",
+            "price": 34.99,
+            "rating": 1,
+            "image": "mysteriis.jpg"
+        },
+        {
+            "id": 4,
+            "name": "Reign In Blood",
+            "band": "Slayer",
+            "type": "CD",
+            "price": 32.99,
+            "rating": 2,
+            "image": "reigninblood.jpg"
+        }
+
+    ]
+}
