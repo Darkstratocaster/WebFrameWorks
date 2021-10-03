@@ -36,7 +36,7 @@ class App extends React.Component {
 }
 
 
-addNewItem = (name, band, type, price, rating, image) => {
+addNewRecord = (name, band, type, price, rating, image) => {
   axios.post('http://localhost:4000/products', {
     name: name,
     band: band,
@@ -47,8 +47,6 @@ addNewItem = (name, band, type, price, rating, image) => {
   })
   .then( (response) => {
     console.log(response.config.data);
-    //let newItems = [...this.state.items];
-    //newItems.push(response.config.data);
     this.setState({records: response.data});
   })
   .catch(function (error) {
@@ -57,9 +55,9 @@ addNewItem = (name, band, type, price, rating, image) => {
 
 }
 
-deleteItem = (itemId) => {
-  axios.delete('http://localhost:4000/products/'+itemId,{
-    id: itemId
+deleteRecord = (recordId) => {
+  axios.delete('http://localhost:4000/products/'+recordId,{
+    id: recordId
   })
   .then(response => {
     console.log(response)
@@ -77,15 +75,15 @@ deleteItem = (itemId) => {
         <TopBar searchString={this.state.searchString} updateSearch={this.updateSearch}></TopBar>
         <ShopDiv
           records={ this.state.records.filter((record) => (record.name.toLowerCase().includes(this.state.searchString)) || (record.band.toLowerCase().includes(this.state.searchString)))} />
-          <button onClick={() => this.setState({adminModeActive: !this.state.adminModeActive})}>Admin mode</button>
+          <button styles={{paddingBottom: '50px'}}onClick={() => this.setState({adminModeActive: !this.state.adminModeActive})}>Admin mode</button>
         </div>
 
 if(this.state.adminModeActive) {
   output = <AdminView
               disableAdminMode={() => this.setState({adminModeActive: false}) }
-              addNewItem={ this.addNewItem }
+              addNewRecord={ this.addNewRecord }
               records={ this.state.records }
-              deleteItem={ this.deleteItem }
+              deleteRecord={ this.deleteRecord }
            />;
 }    
     return (

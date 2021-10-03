@@ -2,45 +2,45 @@ import React, { useState } from 'react'
 
 export default function AdminView(props) {
 
-  const [newItemName, setNewItemName] = useState("");
-  const [newItemBand, setNewItemBand] = useState("");
-  const [newItemType, setNewItemType] = useState("");
-  const [newItemPrice, setNewItemPrice] = useState("");
-  const [newItemRating, setNewItemRating] = useState("");
-  const [newItemImage, setNewItemImage] = useState("");
+  const [newRecordName, setNewRecordName] = useState("");
+  const [newRecordBand, setNewRecordBand] = useState("");
+  const [newRecordType, setNewRecordType] = useState("");
+  const [newRecordPrice, setNewRecordPrice] = useState("");
+  const [newRecordRating, setNewRecordRating] = useState("");
+  const [newRecordImage, setNewRecordImage] = useState("");
 
-  const addNewItem = () => {
-    props.addNewItem(newItemName, newItemBand, newItemType, newItemPrice, newItemRating, newItemImage);
+  const addNewRecord = () => {
+    props.addNewRecord(newRecordName, newRecordBand, newRecordType, newRecordPrice, newRecordRating, newRecordImage);
   }
 
-  const onDeleteItemClick = (itemId) => {
-    console.log("clicked delete for item id " + itemId);
-    props.deleteItem(itemId);
+  const onDeleteRecordClick = (recordId) => {
+    console.log("clicked delete for item id " + recordId);
+    props.deleteRecord(recordId);
   }
 
   return (
     <div>
       <div>
-          <h1>Add new item</h1>
+          <h1>Add new record</h1>
           <div>
-            Name <input type="text" onChange={ (event) => setNewItemName(event.target.value) } />
+            Name <input type="text" onChange={ (event) => setNewRecordName(event.target.value) } />
           </div>
           <div>
-            Band <input type="text" onChange={ (event) => setNewItemBand(event.target.value) } />
+            Band <input type="text" onChange={ (event) => setNewRecordBand(event.target.value) } />
           </div>
           <div>
-            Type <input type="text" onChange={ (event) => setNewItemType(event.target.value) } />
+            Type <input type="text" onChange={ (event) => setNewRecordType(event.target.value) } />
           </div>
           <div>
-            Price <input type="text" onChange={ (event) => setNewItemPrice(event.target.value) } />
+            Price <input type="text" onChange={ (event) => setNewRecordPrice(event.target.value) } />
           </div>
           <div>
-            Rating <input type="text" onChange={ (event) => setNewItemRating(event.target.value) } />
+            Rating <input type="text" onChange={ (event) => setNewRecordRating(event.target.value) } />
           </div>
           <div>
-            Image <input type="text" onChange={ (event) => setNewItemImage(event.target.value) } />
+            Image <input type="text" onChange={ (event) => setNewRecordImage(event.target.value) } />
           </div>
-          <button onClick={ addNewItem }>Add Item</button>
+          <button onClick={ addNewRecord }>Add Record</button>
 
         </div>
         <button onClick={ props.disableAdminMode }>Disable Admin Mode</button>
@@ -48,7 +48,7 @@ export default function AdminView(props) {
         <h1>List of records</h1>
         { props.records.map((record, index) =>
           <div key={index}>
-            <button onClick={() => onDeleteItemClick(record.id)}>X</button> {record.name}, {record.band}, {record.type} {record.price}, {record.rating}, {record.image}
+            <button onClick={() => onDeleteRecordClick(record.id)}>X</button> {record.name}, {record.band}, {record.type} {record.price}, {record.rating}, {record.image}
           </div>)}
     </div>
   )
